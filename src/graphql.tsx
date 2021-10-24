@@ -1,13 +1,14 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
-export interface Ship {
+export type Ship = {
   name: string;
   home_port: string;
   image: string;
   id: string;
-}
+  weight_kg: number;
+};
 
-export interface Launch {
+export type Launch = {
   id: string;
   mission_name: string;
   launch_date_local: string;
@@ -18,11 +19,11 @@ export interface Launch {
     rocket_name: string;
   };
   ships: Ship[];
-}
+};
 
-export interface LaunchData {
+export type LaunchData = {
   launchesPast: Launch[];
-}
+};
 
 export const PAST_LAUNCHES = gql`
   query GetPastLaunches {
@@ -41,6 +42,7 @@ export const PAST_LAUNCHES = gql`
         home_port
         image
         id
+        weight_kg
       }
     }
   }

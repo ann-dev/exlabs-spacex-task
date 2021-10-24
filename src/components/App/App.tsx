@@ -1,14 +1,13 @@
-import PastLaunches from "../PastLaunches/index";
-import "./App.css";
+import React from 'react';
+import PastLaunches from '../PastLaunches/index';
+import './App.css';
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <div className="App">
-      <header className="App-header">
-        <PastLaunches />
-      </header>
+      <PastLaunches />
     </div>
   );
-}
+};
 
 export default App;
