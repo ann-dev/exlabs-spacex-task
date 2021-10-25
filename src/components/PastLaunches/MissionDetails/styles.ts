@@ -26,7 +26,7 @@ export const Article = styled.article`
 export const MainSection = styled.div`
   display: flex;
   flex-direction: column;
-  height: 12.75rem;
+  height: auto;
   justify-content: space-between;
   text-align: left;
 
@@ -52,11 +52,13 @@ export const SubSection = styled.div`
 export const HeadingsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 3.9rem;
+  height: auto;
   justify-content: space-between;
+  margin-bottom: 1.25rem;
 
   @media ${DEVICES.laptop} {
     height: 5rem;
+    margin: 0;
   }
 `;
 
@@ -108,6 +110,7 @@ export const CtaButton = styled.button`
   font-size: 0.875rem;
   font-weight: 500;
   height: 3.375rem;
+  margin-top: 1.875rem;
   text-transform: uppercase;
   width: 100%;
 
@@ -120,6 +123,7 @@ export const CtaButton = styled.button`
     width: 15rem;
   }
   @media ${DEVICES.laptop} {
+    margin: 0;
     width: 10rem;
   }
 `;
