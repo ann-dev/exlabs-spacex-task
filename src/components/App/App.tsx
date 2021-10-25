@@ -1,12 +1,12 @@
 import React from 'react';
 import PastLaunches from '../PastLaunches/index';
-import './App.css';
+import { Wrapper } from './styles';
 
 const App = (): JSX.Element => {
   return (
-    <div className="App">
+    <Wrapper>
       <PastLaunches />
-    </div>
+    </Wrapper>
   );
 };
 

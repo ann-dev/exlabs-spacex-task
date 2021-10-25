@@ -19,8 +19,8 @@ const ShipGallery = ({ data }: ShipGalleryProps): JSX.Element => {
             key={ship.id}
             title={ship.name}
             imgSrc={ship.image}
-            category_1="Home port: "
-            category_2="Weight [kg]: "
+            category_1="Home port "
+            category_2="Weight [kg]"
             item_1={ship.home_port}
             item_2={ship.weight_kg}
           />

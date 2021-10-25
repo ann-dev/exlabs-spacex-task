@@ -1,5 +1,16 @@
 import React from 'react';
 
+import {
+  CoverImage,
+  DetailsWrapper,
+  Divider,
+  ImageContainer,
+  SubText,
+  SubTitle,
+  Title,
+  Wrapper,
+} from './styles';
+
 type CardProps = {
   title: string;
   imgSrc: string;
@@ -18,19 +29,23 @@ const Card = ({
   item_2,
 }: CardProps): JSX.Element => {
   return (
-    <div style={{ backgroundColor: 'white', color: 'black' }}>
-      <h3>{title}</h3>
-      <img src={imgSrc} style={{ width: '250px' }} role="presentation" alt="" />
-      <hr />
-      <div>
-        <span>{category_1}</span>
-        <span>{item_1}</span>
-      </div>
-      <div>
-        <span>{category_2}</span>
-        <span>{item_2}</span>
-      </div>
-    </div>
+    <Wrapper>
+      <ImageContainer>
+        <CoverImage src={imgSrc} role="presentation" alt="" />
+      </ImageContainer>
+      <DetailsWrapper>
+        <Title>{title}</Title>
+        <Divider />
+        <div>
+          <SubTitle>{category_1}</SubTitle>
+          <SubText>{item_1 || "Unknown"}</SubText>
+        </div>
+        <div>
+          <SubTitle>{category_2}</SubTitle>
+          <SubText>{item_2 || "Unknown"}</SubText>
+        </div>
+      </DetailsWrapper>
+    </Wrapper>
   );
 };
 

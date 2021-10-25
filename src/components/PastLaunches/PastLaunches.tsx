@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import { LaunchData } from '../../graphql';
 
+import { LaunchData } from '../../graphql';
+import { Wrapper } from './styles';
 import Navigation from '../_common/Navigation';
 import SpaceXLogo from '../../assets/logo.svg';
 import MissionDetails from './MissionDetails';
@@ -24,7 +25,7 @@ const PastLaunches = ({ data }: PastLaunchesProps): JSX.Element => {
   };
 
   return (
-    <>
+    <Wrapper>
       <header>
         <Navigation
           dataLength={data.launchesPast.length}
@@ -44,7 +45,7 @@ const PastLaunches = ({ data }: PastLaunchesProps): JSX.Element => {
         />
         <ShipGallery data={launchData.ships} />
       </main>
-    </>
+    </Wrapper>
   );
 };
 
