@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DEVICES } from '../../../constants/DEVICES';
 
 export const Wrapper = styled.div`
   background-color: white;
@@ -6,7 +7,14 @@ export const Wrapper = styled.div`
   color: black;
   height: 21.25rem;
   overflow: hidden;
-  width: 22.5rem;
+  width: calc(100vw - 2rem);
+
+  @media ${DEVICES.tablet} {
+    width: calc(50vw - 1.5rem);
+  }
+  @media ${DEVICES.laptop} {
+    width: 22.5rem;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -18,7 +26,14 @@ export const CoverImage = styled.img`
   height: 12.5rem;
   object-fit: cover;
   object-position: center center;
-  width: 22.5rem;
+  width: calc(100vw - 2rem);
+
+  @media ${DEVICES.tablet} {
+    width: calc(50vw - 1.5rem);
+  }
+  @media ${DEVICES.laptop} {
+    width: 22.5rem;
+  }
 `;
 
 export const DetailsWrapper = styled.div`
@@ -36,7 +51,7 @@ export const Title = styled.span`
 export const Divider = styled.div`
   background-color: #e8e8e8;
   height: 1px;
-  margin: 16px 0 14px 0;
+  margin: 1rem 0 0.875rem 0;
   width: 100%;
 `;
 
@@ -52,5 +67,5 @@ export const SubText = styled.span`
   font-size: 0.875rem;
   font-weight: bold;
   line-height: 1.5rem;
-  margin-left: 38px;
+  margin-left: 2.375rem;
 `;

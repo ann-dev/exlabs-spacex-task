@@ -1,8 +1,14 @@
 import styled from 'styled-components';
+import { DEVICES } from '../../../constants/DEVICES';
 
 export const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
+  padding: 0 1rem;
+
+  @media ${DEVICES.laptop} {
+    padding: 0;
+  }
 `;
 
 export const Button = styled.button`
@@ -17,5 +23,8 @@ export const Button = styled.button`
 `;
 
 export const Logo = styled.img`
-  width: 15.5rem;
+  width: 12.5rem;
+  @media ${DEVICES.laptop} {
+    width: 18.75rem;
+  }
 `;

@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import { LaunchData } from '../../graphql';
 import { Wrapper } from './styles';
-import Navigation from '../_common/Navigation';
+import Navigation from '../_shared/Navigation';
 import SpaceXLogo from '../../assets/logo.svg';
 import MissionDetails from './MissionDetails';
 import ShipGallery from './ShipGallery';
