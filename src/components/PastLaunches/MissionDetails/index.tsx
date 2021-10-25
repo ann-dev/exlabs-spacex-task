@@ -21,8 +21,6 @@ interface MissionDetailsProps {
   siteName: string;
 }
 
-const HelloWorld = <span>Hello World</span>;
-
 const MissionDetails = ({
   missionName,
   launchDate,
@@ -36,7 +34,6 @@ const MissionDetails = ({
           <HeadingsWrapper>
             <DetailsHeading>Mission</DetailsHeading>
             <Heading>{missionName}</Heading>
-            {HelloWorld}
           </HeadingsWrapper>
           <DetailsWrapper>
             <DetailsHeading>Rocket</DetailsHeading>

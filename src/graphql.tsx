@@ -27,7 +27,7 @@ export type LaunchData = {
 
 export const PAST_LAUNCHES = gql`
   query GetPastLaunches {
-    launchesPast(limit: 5) {
+    launchesPast(limit: 15) {
       id
       mission_name
       launch_date_local

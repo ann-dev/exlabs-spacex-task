@@ -38,11 +38,11 @@ const Card = ({
         <Divider />
         <div>
           <SubTitle>{category_1}</SubTitle>
-          <SubText>{item_1 || "Unknown"}</SubText>
+          <SubText>{item_1 || 'Unknown'}</SubText>
         </div>
         <div>
           <SubTitle>{category_2}</SubTitle>
-          <SubText>{item_2 || "Unknown"}</SubText>
+          <SubText>{item_2 || 'Unknown'}</SubText>
         </div>
       </DetailsWrapper>
     </Wrapper>

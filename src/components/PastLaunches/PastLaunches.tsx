@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { LaunchData } from '../../graphql';
 import { Wrapper } from './styles';
@@ -15,6 +15,8 @@ interface PastLaunchesProps {
 const PastLaunches = ({ data }: PastLaunchesProps): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const launchData = data.launchesPast[currentIndex];
+
+  useEffect(() => console.log(data), [data]);
 
   const showPrevMission = () => {
     setCurrentIndex(currentIndex - 1);
