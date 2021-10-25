@@ -1,5 +1,17 @@
 import React from 'react';
 import { formatDate } from '../../../utils';
+import {
+  Article,
+  CtaButton,
+  DetailsHeading,
+  DetailsText,
+  DetailsWrapper,
+  Heading,
+  HeadingsWrapper,
+  MainSection,
+  SubSection,
+  Wrapper,
+} from './styles';
 
 interface MissionDetailsProps {
   missionName: string;
@@ -15,18 +27,31 @@ const MissionDetails = ({
   siteName,
 }: MissionDetailsProps): JSX.Element => {
   return (
-    <section>
-      <hr />
-      <article>
-        <h1>
-          Mission: <br /> {missionName}
-        </h1>
-        <p>Launch date: {formatDate(launchDate)}</p>
-        <p>Rocket: {rocketName}</p>
-        <p>Launch site: {siteName}</p>
-        <button>Learn More</button>
-      </article>
-    </section>
+    <Wrapper>
+      <Article>
+        <MainSection>
+          <HeadingsWrapper>
+            <DetailsHeading>Mission</DetailsHeading>
+            <Heading>{missionName}</Heading>
+          </HeadingsWrapper>
+          <DetailsWrapper>
+            <DetailsHeading>Rocket</DetailsHeading>
+            <DetailsText>{rocketName}</DetailsText>
+          </DetailsWrapper>
+          <CtaButton>Learn More</CtaButton>
+        </MainSection>
+        <SubSection>
+          <DetailsWrapper>
+            <DetailsHeading>Launch date</DetailsHeading>
+            <DetailsText>{formatDate(launchDate)}</DetailsText>
+          </DetailsWrapper>
+          <DetailsWrapper>
+            <DetailsHeading>Launch site</DetailsHeading>
+            <DetailsText>{siteName}</DetailsText>
+          </DetailsWrapper>
+        </SubSection>
+      </Article>
+    </Wrapper>
   );
 };
 
