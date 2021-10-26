@@ -43,6 +43,7 @@ const PastLaunches = ({ data }: PastLaunchesProps): JSX.Element => {
           rocketName={launchData.rocket.rocket_name}
           fairings={launchData.rocket.fairings}
           siteName={launchData.launch_site.site_name}
+          siteName_Long={launchData.launch_site.site_name_long}
         />
         <ShipGallery data={launchData.ships} />
       </main>

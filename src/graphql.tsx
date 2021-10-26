@@ -14,6 +14,7 @@ export type Launch = {
   launch_date_local: string;
   launch_site: {
     site_name: string;
+    site_name_long: string;
   };
   rocket: {
     rocket_name: string;
@@ -40,6 +41,7 @@ export const PAST_LAUNCHES = gql`
       launch_date_local
       launch_site {
         site_name
+        site_name_long
       }
       rocket {
         rocket_name

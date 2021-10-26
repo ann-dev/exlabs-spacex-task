@@ -1,4 +1,8 @@
 import React from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light.css';
+
 import { formatDate } from '../../../utils';
 import { Fairings } from '../../../graphql';
 import Label from '../../_common/Label';
@@ -23,6 +27,7 @@ interface MissionDetailsProps {
   fairings: Fairings;
   rocketName: string;
   siteName: string;
+  siteName_Long: string;
 }
 
 const MissionDetails = ({
@@ -31,6 +36,7 @@ const MissionDetails = ({
   fairings,
   rocketName,
   siteName,
+  siteName_Long,
 }: MissionDetailsProps): JSX.Element => {
   return (
     <Wrapper>
@@ -56,7 +62,14 @@ const MissionDetails = ({
           </DetailsWrapper>
           <DetailsWrapper>
             <DetailsHeading>Launch site</DetailsHeading>
-            <DetailsText>{siteName}</DetailsText>
+            <Tippy
+              content={siteName_Long}
+              arrow={false}
+              placement="bottom-start"
+              theme="light"
+            >
+              <DetailsText>{siteName}</DetailsText>
+            </Tippy>
           </DetailsWrapper>
         </SubSection>
       </Article>
