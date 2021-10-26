@@ -21,10 +21,3 @@ export const Button = styled.button`
     cursor: pointer;
   }
 `;
-
-export const Logo = styled.img`
-  width: 12.5rem;
-  @media ${DEVICES.laptop} {
-    width: 18.75rem;
-  }
-`;

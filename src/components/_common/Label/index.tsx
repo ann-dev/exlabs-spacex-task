@@ -8,7 +8,7 @@ type LabelProps = {
 const Label = ({ status }: LabelProps): JSX.Element => {
   return (
     <StatusLabel style={{ backgroundColor: status ? '#6FB46E' : '#BE4E35' }}>
-      <LabelText>{status ? 'Recovered' : 'Uncovered'}</LabelText>
+      <LabelText>{status ? 'Recovered' : 'Unrecovered'}</LabelText>
     </StatusLabel>
   );
 };

@@ -1,13 +1,12 @@
 import React from 'react';
-import { Button, Logo, Wrapper } from './styles';
+import Logo from '../Logo';
+import { Button, Wrapper } from './styles';
 import { ReactComponent as IconLeft } from '../../../assets/chevron-left.svg';
 import { ReactComponent as IconRight } from '../../../assets/chevron-right.svg';
 
 type NavigationProps = {
   dataIndex: number;
   dataLength: number;
-  logoAlt: string;
-  logoSrc: string;
   onPrev: () => void;
   onNext: () => void;
 };
@@ -15,8 +14,6 @@ type NavigationProps = {
 const Navigation = ({
   dataIndex,
   dataLength,
-  logoAlt,
-  logoSrc,
   onPrev,
   onNext,
 }: NavigationProps): JSX.Element => {
@@ -25,7 +22,7 @@ const Navigation = ({
       <Button disabled={!(dataIndex > 0)} onClick={onPrev}>
         <IconLeft />
       </Button>
-      <Logo src={logoSrc} alt={logoAlt ? logoAlt : ''} />
+      <Logo />
       <Button disabled={!(dataLength - 1 !== dataIndex)} onClick={onNext}>
         <IconRight />
       </Button>

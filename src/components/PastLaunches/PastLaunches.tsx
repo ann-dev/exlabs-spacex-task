@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { LaunchData } from '../../graphql';
 import { Wrapper } from './styles';
 import Navigation from '../_shared/Navigation';
-import SpaceXLogo from '../../assets/logo.svg';
 import MissionDetails from './MissionDetails';
 import ShipGallery from './ShipGallery';
 
@@ -30,8 +29,6 @@ const PastLaunches = ({ data }: PastLaunchesProps): JSX.Element => {
         <Navigation
           dataLength={data.launchesPast.length}
           dataIndex={currentIndex}
-          logoAlt="SpaceX main logo"
-          logoSrc={SpaceXLogo}
           onPrev={showPrevMission}
           onNext={showNextMission}
         />
