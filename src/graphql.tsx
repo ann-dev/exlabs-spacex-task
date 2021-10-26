@@ -17,12 +17,19 @@ export type Launch = {
   };
   rocket: {
     rocket_name: string;
+    fairings: {
+      recovered: boolean;
+    };
   };
   ships: Ship[];
 };
 
 export type LaunchData = {
   launchesPast: Launch[];
+};
+
+export type Fairings = {
+  recovered: boolean;
 };
 
 export const PAST_LAUNCHES = gql`
@@ -36,6 +43,9 @@ export const PAST_LAUNCHES = gql`
       }
       rocket {
         rocket_name
+        fairings {
+          recovered
+        }
       }
       ships {
         name

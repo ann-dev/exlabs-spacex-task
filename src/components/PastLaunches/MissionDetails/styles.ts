@@ -103,6 +103,11 @@ export const DetailsText = styled.p`
   }
 `;
 
+export const StatusWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const CtaButton = styled.button`
   background-color: transparent;
   border: 2px solid white;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { LaunchData } from '../../graphql';
 import { Wrapper } from './styles';
@@ -15,8 +15,6 @@ interface PastLaunchesProps {
 const PastLaunches = ({ data }: PastLaunchesProps): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const launchData = data.launchesPast[currentIndex];
-
-  useEffect(() => console.log(data), [data]);
 
   const showPrevMission = () => {
     setCurrentIndex(currentIndex - 1);
@@ -43,6 +41,7 @@ const PastLaunches = ({ data }: PastLaunchesProps): JSX.Element => {
           missionName={launchData.mission_name}
           launchDate={launchData.launch_date_local}
           rocketName={launchData.rocket.rocket_name}
+          fairings={launchData.rocket.fairings}
           siteName={launchData.launch_site.site_name}
         />
         <ShipGallery data={launchData.ships} />

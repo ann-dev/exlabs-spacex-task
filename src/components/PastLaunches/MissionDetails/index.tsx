@@ -1,5 +1,7 @@
 import React from 'react';
 import { formatDate } from '../../../utils';
+import { Fairings } from '../../../graphql';
+import Label from '../../_common/Label';
 
 import {
   Article,
@@ -10,6 +12,7 @@ import {
   Heading,
   HeadingsWrapper,
   MainSection,
+  StatusWrapper,
   SubSection,
   Wrapper,
 } from './styles';
@@ -17,6 +20,7 @@ import {
 interface MissionDetailsProps {
   missionName: string;
   launchDate: string;
+  fairings: Fairings;
   rocketName: string;
   siteName: string;
 }
@@ -24,6 +28,7 @@ interface MissionDetailsProps {
 const MissionDetails = ({
   missionName,
   launchDate,
+  fairings,
   rocketName,
   siteName,
 }: MissionDetailsProps): JSX.Element => {
@@ -37,7 +42,10 @@ const MissionDetails = ({
           </HeadingsWrapper>
           <DetailsWrapper>
             <DetailsHeading>Rocket</DetailsHeading>
-            <DetailsText>{rocketName}</DetailsText>
+            <StatusWrapper>
+              <DetailsText>{rocketName}</DetailsText>
+              <Label status={fairings && fairings.recovered} />
+            </StatusWrapper>
           </DetailsWrapper>
           <CtaButton>Learn More</CtaButton>
         </MainSection>
