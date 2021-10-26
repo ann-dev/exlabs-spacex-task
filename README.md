@@ -2,7 +2,7 @@
 
 ![Desktop preview](./preview.png)
 
-<h3 align="center"><a href="" target="_blank">🎉 Live Demo</a></h3>
+<h3 align="center"><a href="https://exlabs-spacex-task.vercel.app/" target="_blank">🎉 Live Demo</a></h3>
 
 ## Description
 
